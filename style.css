@@ -1,0 +1,165 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
+  background: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);
+  height: 100%;
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100% 124%;
+}
+
+.card {
+  width: 327px;
+  margin: 40px auto;
+  border-radius: 40px;
+}
+
+.container {
+  position: relative;
+  background: white;
+  margin-top: 148px;
+  border-radius: 20px;
+}
+
+img {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+header {
+  width: 237px;
+  margin: auto;
+  top: -126px;
+  position: relative;
+  z-index: 5;
+}
+
+.headerPrincipal {
+  height: 100px;
+  width: 100%;
+  position: relative;
+  top: 26px;
+}
+
+.headerPrincipal::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 200px;
+  top: 93px;
+  left: 20px;
+  background-repeat: no-repeat;
+  background-image: url("../images/bg-pattern-mobile.svg");
+}
+
+main {
+  width: 327px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  top: -100px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.principal {
+  width: 279px;
+  margin: auto;
+}
+
+h1 {
+  padding-top: 140px;
+  text-align: center;
+  font-size: 2.6rem;
+  color: hsl(238, 29%, 16%);
+  font-weight: bold;
+}
+
+.faq {
+  margin-top: 20px;
+}
+
+/*SOBREESCVRIBIENDO REGLA DE BOOTSRAP*/
+.accordion-button::after {
+  background-image: url(./images/icon-arrow-down.svg);
+}
+
+.accordion-button:not(.collapsed) {
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  border-color: none;
+}
+
+
+
+@media (min-width: 980px) {
+  main {
+    width: 40%;
+    margin-right: 100px;
+    margin-top: -250px;
+  }
+  .card {
+    width: 80%;
+    margin: 129px auto;
+  }
+  .container {
+    width: 920px;
+    margin: auto;
+  }
+  header {
+    width: 472px;
+    margin-left: 5px;
+    height: 359px;
+    top: 125px;
+  }
+  .principal {
+    width: 375px;
+    margin-right: 110px;
+    padding-bottom: 0px;
+  }
+  .headerPrincipal {
+    top: -125px;
+    left: -146px;
+    overflow: hidden;
+    height: 65vh;
+    width: 100%;
+  }
+  img {
+    width: 100%;
+    margin-top: 85px;
+  }
+  .headerPrincipal::after {
+    top: -277px;
+    left: -500px;
+    width: 86vw;
+    height: 100vh;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    transform: scale(1);
+    z-index: -1;
+  }
+    header::before {
+    position: absolute;
+    content: '';
+    background-image: url(../images/illustration-box-desktop.svg);
+    width: 48%;
+    height: 61%;
+    top: 70px;
+    left: -135px;
+    z-index: 4;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+  }
+  h1 {
+    padding-top: 78px;
+    margin-left: -300px;
+    font-size: 2rem;
+  }
+}
